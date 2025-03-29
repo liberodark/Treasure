@@ -1,0 +1,246 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqb8tv8kn52ip"]
+
+[ext_resource type="Script" uid="uid://dvokl3xjxmbpd" path="res://scripts/menu.gd" id="1_7gowp"]
+[ext_resource type="Texture2D" uid="uid://rmpmrqh8ykg7" path="res://assets/sprites/background.png" id="2_nvww4"]
+[ext_resource type="FontFile" uid="uid://dibq21hs6lh16" path="res://assets/fonts/retro.ttf" id="3_wpu34"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx0om"]
+content_margin_left = 15.0
+content_margin_top = 12.0
+content_margin_right = 15.0
+content_margin_bottom = 12.0
+bg_color = Color(0.196078, 0.196078, 0.635294, 0.768627)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 0.462745, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkvwf"]
+content_margin_left = 15.0
+content_margin_top = 12.0
+content_margin_right = 15.0
+content_margin_bottom = 12.0
+bg_color = Color(0.0980392, 0.0980392, 0.439216, 0.768627)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.843137, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7gowp")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nvww4")
+
+[node name="MenuContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -150.0
+offset_right = 140.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 22
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="MenuContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 48
+text = "TREASURE"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="MenuContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="MenuContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 0.458824, 1)
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/hover = SubResource("StyleBoxFlat_nx0om")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkvwf")
+text = "PLAY"
+
+[node name="SettingsButton" type="Button" parent="MenuContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 0.458824, 1)
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/hover = SubResource("StyleBoxFlat_nx0om")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkvwf")
+text = "SETTINGS"
+
+[node name="ExitButton" type="Button" parent="MenuContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 0.458824, 1)
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/hover = SubResource("StyleBoxFlat_nx0om")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkvwf")
+text = "EXIT"
+
+[node name="VersionLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -153.0
+offset_top = -32.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 16
+text = "v3.0.0"
+horizontal_alignment = 2
+
+[node name="SettingsPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -120.0
+offset_right = 150.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pkvwf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="SettingsLabel" type="Label" parent="SettingsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 28
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="SettingsPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MasterVolumeLabel" type="Label" parent="SettingsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 22
+text = "Master Volume"
+horizontal_alignment = 1
+
+[node name="MasterVolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -30.0
+max_value = 0.0
+step = 0.1
+
+[node name="MusicVolumeLabel" type="Label" parent="SettingsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 22
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="MusicVolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -30.0
+max_value = 0.0
+step = 0.1
+
+[node name="SFXVolumeLabel" type="Label" parent="SettingsPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 22
+text = "SFX Volume"
+horizontal_alignment = 1
+
+[node name="SFXVolumeSlider" type="HSlider" parent="SettingsPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -30.0
+max_value = 0.0
+step = 0.1
+
+[node name="BackButton" type="Button" parent="SettingsPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_colors/font_hover_color = Color(1, 1, 0.458824, 1)
+theme_override_colors/font_color = Color(1, 0.843137, 0, 1)
+theme_override_fonts/font = ExtResource("3_wpu34")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/hover = SubResource("StyleBoxFlat_nx0om")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkvwf")
+text = "BACK"

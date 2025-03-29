@@ -1,0 +1,148 @@
+[gd_scene load_steps=9 format=4 uid="uid://cwo5i7ak452uv"]
+
+[ext_resource type="Texture2D" uid="uid://rmpmrqh8ykg7" path="res://assets/sprites/background.png" id="1_ry65h"]
+[ext_resource type="PackedScene" uid="uid://b5ryteueg6c6w" path="res://scenes/objects/camera.tscn" id="1_vals0"]
+[ext_resource type="TileSet" uid="uid://7ak8cnowfmr6" path="res://scenes/levels/wall.tres" id="2_1nvli"]
+[ext_resource type="PackedScene" uid="uid://bkkqgyamnpv8k" path="res://scenes/actors/monster.tscn" id="2_f02tp"]
+[ext_resource type="PackedScene" uid="uid://behb2vu1utr5i" path="res://scenes/actors/player.tscn" id="3_04g2k"]
+[ext_resource type="PackedScene" uid="uid://b2i7pgsksi7es" path="res://scenes/objects/treasure.tscn" id="4_vxl8l"]
+[ext_resource type="PackedScene" uid="uid://djvbc2yo8hrx4" path="res://scenes/objects/bonus.tscn" id="6_1nvli"]
+[ext_resource type="PackedScene" uid="uid://bsxxo3o5r7oh5" path="res://scenes/objects/special.tscn" id="7_vals0"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Camera" parent="." instance=ExtResource("1_vals0")]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-240, -240)
+texture = ExtResource("1_ry65h")
+centered = false
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-240, -240)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAgAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA4AAAAAAAAAAAABAAAAAAAAAAAAAAABAAcAAAAAAAAAAAABAAkAAAAAAAAAAAABAA4AAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAMAAAAAAAAAAAACAAsAAAAAAAAAAAACAA0AAAAAAAAAAAACAA4AAAAAAAAAAAADAAAAAAAAAAAAAAADAAQAAAAAAAAAAAADAAcAAAAAAAAAAAADAAoAAAAAAAAAAAADAA4AAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAwAAAAAAAAAAAAEAA4AAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAA0AAAAAAAAAAAAFAA4AAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAsAAAAAAAAAAAAGAA4AAAAAAAAAAAAHAAoAAAAAAAAAAAAHAAsAAAAAAAAAAAAHAA0AAAAAAAAAAAAHAA4AAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAsAAAAAAAAAAAAIAA4AAAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAKAAAAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAwAAAAAAAAAAAAKAA4AAAAAAAAAAAALAAAAAAAAAAAAAAALAAQAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAALAAgAAAAAAAAAAAALAAoAAAAAAAAAAAALAA4AAAAAAAAAAAAMAAAAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAsAAAAAAAAAAAAMAA0AAAAAAAAAAAAMAA4AAAAAAAAAAAANAAAAAAAAAAAAAAANAAUAAAAAAAAAAAANAAcAAAAAAAAAAAANAAkAAAAAAAAAAAANAA4AAAAAAAAAAAAOAAAAAAAAAAAAAAAOAAEAAAAAAAAAAAAOAAIAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAgAAAAAAAAAAAAOAAkAAAAAAAAAAAAOAAoAAAAAAAAAAAAOAAsAAAAAAAAAAAAOAAwAAAAAAAAAAAAOAA0AAAAAAAAAAAAOAA4AAAAAAAAAAAA=")
+tile_set = ExtResource("2_1nvli")
+
+[node name="Monster" parent="." instance=ExtResource("2_f02tp")]
+position = Vector2(32, 32)
+
+[node name="Player" parent="." instance=ExtResource("3_04g2k")]
+position = Vector2(0, 160)
+
+[node name="Treasure" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-192, 192)
+
+[node name="Bonus" parent="." instance=ExtResource("6_1nvli")]
+position = Vector2(0, -160)
+
+[node name="Special" parent="." instance=ExtResource("7_vals0")]
+position = Vector2(-192, -32)
+
+[node name="Treasure2" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-192, -192)
+
+[node name="Special2" parent="." instance=ExtResource("7_vals0")]
+position = Vector2(192, -32)
+
+[node name="Treasure3" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(192, -192)
+
+[node name="Treasure4" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-128, -192)
+
+[node name="Treasure5" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(96, -192)
+
+[node name="Monster2" parent="." instance=ExtResource("2_f02tp")]
+position = Vector2(-32, 32)
+
+[node name="Monster3" parent="." instance=ExtResource("2_f02tp")]
+position = Vector2(-32, -32)
+
+[node name="Monster4" parent="." instance=ExtResource("2_f02tp")]
+position = Vector2(32, -32)
+
+[node name="Treasure6" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-192, 128)
+
+[node name="Treasure7" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(192, 128)
+
+[node name="Treasure8" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-128, 128)
+
+[node name="Treasure9" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-64, 128)
+
+[node name="Treasure10" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(64, 128)
+
+[node name="Treasure11" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(128, 128)
+
+[node name="Treasure12" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(128, 64)
+
+[node name="Treasure13" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(64, 64)
+
+[node name="Treasure15" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-64, 64)
+
+[node name="Treasure16" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-128, 64)
+
+[node name="Treasure14" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(0, 64)
+
+[node name="Treasure17" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-64, 0)
+
+[node name="Treasure18" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(0, -64)
+
+[node name="Treasure19" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(64, 0)
+
+[node name="Treasure20" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-64, -128)
+
+[node name="Treasure21" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(64, -128)
+
+[node name="Treasure22" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-128, -64)
+
+[node name="Treasure23" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-64, -64)
+
+[node name="Treasure24" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(64, -64)
+
+[node name="Treasure25" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(128, -64)
+
+[node name="Treasure26" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-128, -128)
+
+[node name="Treasure27" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(128, -128)
+
+[node name="Treasure28" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-192, -128)
+
+[node name="Treasure29" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(192, -128)
+
+[node name="Treasure30" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(-128, 192)
+
+[node name="Treasure31" parent="." instance=ExtResource("4_vxl8l")]
+position = Vector2(128, 192)
+
+[node name="Special3" parent="." instance=ExtResource("7_vals0")]
+position = Vector2(-192, 32)
+
+[node name="Special4" parent="." instance=ExtResource("7_vals0")]
+position = Vector2(192, 32)

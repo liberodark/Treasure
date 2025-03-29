@@ -1,0 +1,186 @@
+[gd_scene load_steps=10 format=4 uid="uid://bs5egjp5r7820"]
+
+[ext_resource type="PackedScene" uid="uid://b5ryteueg6c6w" path="res://scenes/objects/camera.tscn" id="1_7eb4w"]
+[ext_resource type="Texture2D" uid="uid://rmpmrqh8ykg7" path="res://assets/sprites/background.png" id="1_frjko"]
+[ext_resource type="TileSet" uid="uid://7ak8cnowfmr6" path="res://scenes/levels/wall.tres" id="2_frjko"]
+[ext_resource type="PackedScene" uid="uid://bkkqgyamnpv8k" path="res://scenes/actors/monster.tscn" id="3_8w0pe"]
+[ext_resource type="PackedScene" uid="uid://behb2vu1utr5i" path="res://scenes/actors/player.tscn" id="4_7eb4w"]
+[ext_resource type="PackedScene" uid="uid://b2i7pgsksi7es" path="res://scenes/objects/treasure.tscn" id="5_hadiw"]
+[ext_resource type="PackedScene" uid="uid://bsxxo3o5r7oh5" path="res://scenes/objects/special.tscn" id="6_72x3h"]
+[ext_resource type="PackedScene" uid="uid://djvbc2yo8hrx4" path="res://scenes/objects/bonus.tscn" id="6_f7rt6"]
+[ext_resource type="PackedScene" uid="uid://bgmouynmfmmwc" path="res://scenes/objects/warp.tscn" id="8_8w0pe"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Camera" parent="." instance=ExtResource("1_7eb4w")]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-240, -240)
+texture = ExtResource("1_frjko")
+centered = false
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-240, -240)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA4AAAAAAAAAAAACAAAAAAAAAAAAAAACAA4AAAAAAAAAAAADAAAAAAAAAAAAAAADAA4AAAAAAAAAAAAEAA4AAAAAAAAAAAAFAAAAAAAAAAAAAAAFAA4AAAAAAAAAAAAGAAAAAAAAAAAAAAAGAA4AAAAAAAAAAAAIAAAAAAAAAAAAAAAIAA4AAAAAAAAAAAAJAAAAAAAAAAAAAAAJAA4AAAAAAAAAAAAKAAAAAAAAAAAAAAAKAA4AAAAAAAAAAAALAAAAAAAAAAAAAAALAA4AAAAAAAAAAAAMAAAAAAAAAAAAAAAMAA4AAAAAAAAAAAAOAAAAAAAAAAAAAAAOAAIAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAgAAAAAAAAAAAAOAAkAAAAAAAAAAAAOAAoAAAAAAAAAAAAOAAsAAAAAAAAAAAAOAAwAAAAAAAAAAAAOAA4AAAAAAAAAAAAHAAAAAAAAAAAAAAAHAA4AAAAAAAAAAAAAAAcAAAAAAAAAAAAOAAcAAAAAAAAAAAAAAA8AAAAAAAAAAAACAA8AAAAAAAAAAAAMAA8AAAAAAAAAAAAOAA8AAAAAAAAAAAAPAAAAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAwAAAAAAAAAAAAPAA4AAAAAAAAAAAABAAQAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAABAAkAAAAAAAAAAAAEAA0AAAAAAAAAAAACAAwAAAAAAAAAAAACAAsAAAAAAAAAAAADAAsAAAAAAAAAAAADAAoAAAAAAAAAAAAFAAsAAAAAAAAAAAAFAAoAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAHAAoAAAAAAAAAAAAIAAoAAAAAAAAAAAAHAAgAAAAAAAAAAAAHAAcAAAAAAAAAAAAGAAcAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAGAA0AAAAAAAAAAAAHAA0AAAAAAAAAAAAHAAwAAAAAAAAAAAAJAA0AAAAAAAAAAAAMAAwAAAAAAAAAAAALAAwAAAAAAAAAAAALAAsAAAAAAAAAAAAKAAsAAAAAAAAAAAANAAoAAAAAAAAAAAALAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAcAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAANAAcAAAAAAAAAAAANAAgAAAAAAAAAAAANAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAHAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAFAAcAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAFAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAMAAAAAAAAAAAA=")
+tile_set = ExtResource("2_frjko")
+
+[node name="Player" parent="." instance=ExtResource("4_7eb4w")]
+position = Vector2(192, 192)
+
+[node name="Special" parent="." instance=ExtResource("6_72x3h")]
+position = Vector2(-32, -192)
+
+[node name="Treasure" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-96, -160)
+
+[node name="Treasure2" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-32, -160)
+
+[node name="Treasure3" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(32, -160)
+
+[node name="Treasure4" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(96, -160)
+
+[node name="Treasure5" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(160, -96)
+
+[node name="Treasure6" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(96, -96)
+
+[node name="Treasure7" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(32, -96)
+
+[node name="Treasure8" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-96, -96)
+
+[node name="Treasure9" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-160, -96)
+
+[node name="Treasure10" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-96, -32)
+
+[node name="Treasure11" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-160, -32)
+
+[node name="Treasure12" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-160, 32)
+
+[node name="Special2" parent="." instance=ExtResource("6_72x3h")]
+position = Vector2(-192, 32)
+
+[node name="Treasure13" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-160, 96)
+
+[node name="Treasure14" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-96, 96)
+
+[node name="Treasure15" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-96, 160)
+
+[node name="Treasure16" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-32, 96)
+
+[node name="Treasure17" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-32, 160)
+
+[node name="Treasure18" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(32, 160)
+
+[node name="Treasure19" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(96, 160)
+
+[node name="Treasure20" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(96, 96)
+
+[node name="Treasure21" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(160, 96)
+
+[node name="Treasure22" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(160, 32)
+
+[node name="Treasure23" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(96, 32)
+
+[node name="Treasure24" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-32, 32)
+
+[node name="Treasure25" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(32, 32)
+
+[node name="Treasure26" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(160, -32)
+
+[node name="Bonus" parent="." instance=ExtResource("6_f7rt6")]
+position = Vector2(32, -32)
+
+[node name="Treasure27" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(32, -32)
+
+[node name="Treasure28" parent="." instance=ExtResource("5_hadiw")]
+position = Vector2(-32, -32)
+
+[node name="Special3" parent="." instance=ExtResource("6_72x3h")]
+position = Vector2(32, 192)
+
+[node name="Special4" parent="." instance=ExtResource("6_72x3h")]
+position = Vector2(192, -32)
+
+[node name="Monster" parent="." instance=ExtResource("3_8w0pe")]
+position = Vector2(0, 128)
+
+[node name="Monster2" parent="." instance=ExtResource("3_8w0pe")]
+position = Vector2(-64, 64)
+
+[node name="Monster3" parent="." instance=ExtResource("3_8w0pe")]
+position = Vector2(-128, 0)
+
+[node name="Monster4" parent="." instance=ExtResource("3_8w0pe")]
+position = Vector2(0, -128)
+
+[node name="Monster5" parent="." instance=ExtResource("3_8w0pe")]
+position = Vector2(64, -64)
+
+[node name="Monster6" parent="." instance=ExtResource("3_8w0pe")]
+position = Vector2(128, 0)
+
+[node name="Warp" parent="." instance=ExtResource("8_8w0pe")]
+position = Vector2(-224, -192)
+warp_id = 1
+target_warp_id = 2
+
+[node name="Warp2" parent="." instance=ExtResource("8_8w0pe")]
+position = Vector2(224, -192)
+warp_id = 2
+target_warp_id = 1
+
+[node name="Warp3" parent="." instance=ExtResource("8_8w0pe")]
+position = Vector2(-192, -224)
+warp_id = 3
+target_warp_id = 4
+
+[node name="Warp4" parent="." instance=ExtResource("8_8w0pe")]
+position = Vector2(-192, 224)
+warp_id = 4
+target_warp_id = 3
+
+[node name="Warp5" parent="." instance=ExtResource("8_8w0pe")]
+position = Vector2(-224, 192)
+warp_id = 5
+target_warp_id = 6
+
+[node name="Warp6" parent="." instance=ExtResource("8_8w0pe")]
+position = Vector2(224, 192)
+warp_id = 6
+target_warp_id = 5
+
+[node name="Warp7" parent="." instance=ExtResource("8_8w0pe")]
+position = Vector2(192, -224)
+warp_id = 7
+target_warp_id = 8
+
+[node name="Warp8" parent="." instance=ExtResource("8_8w0pe")]
+position = Vector2(192, 224)
+warp_id = 8
+target_warp_id = 7
