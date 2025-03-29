@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsxxo3o5r7oh5"]
+
+[ext_resource type="Texture2D" uid="uid://b1xwajf475fvw" path="res://assets/sprites/special.png" id="1_wkgvp"]
+[ext_resource type="Script" uid="uid://o8ih83gif8ft" path="res://scripts/special.gd" id="2_hhk4j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkt42"]
+size = Vector2(32, 32)
+
+[node name="Special" type="Area2D" groups=["specials"]]
+script = ExtResource("2_hhk4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wkgvp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qkt42")

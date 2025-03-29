@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkkqgyamnpv8k"]
+
+[ext_resource type="Script" uid="uid://cd8xdarb1boyd" path="res://scripts/monster.gd" id="1_ga5te"]
+[ext_resource type="Texture2D" uid="uid://c8fd77seudtv8" path="res://assets/sprites/afraid.png" id="2_vr0w3"]
+[ext_resource type="Texture2D" uid="uid://cdj313g7afirk" path="res://assets/sprites/monster.png" id="3_6tndq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ngjm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vr0w3")
+}],
+"loop": true,
+"name": &"afraid",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6tndq")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga5te"]
+size = Vector2(32, 32)
+
+[node name="Monster" type="CharacterBody2D"]
+script = ExtResource("1_ga5te")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8ngjm")
+animation = &"normal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ga5te")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2i7pgsksi7es"]
+
+[ext_resource type="Texture2D" uid="uid://bkecdxygexa0g" path="res://assets/sprites/treasure.png" id="1_dubxd"]
+[ext_resource type="Script" path="res://scripts/treasure.gd" id="2_gpswc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkt42"]
+size = Vector2(32, 32)
+
+[node name="Treasure" type="Area2D" groups=["treasures"]]
+script = ExtResource("2_gpswc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dubxd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qkt42")
